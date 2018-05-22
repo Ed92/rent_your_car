@@ -1,1 +1,11 @@
-// Specific CSS for your home-page
+#banner {
+  background-image: url("home_photo.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+  padding-top: 150px;
+}
