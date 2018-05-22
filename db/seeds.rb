@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.last
 
-cars1 = Car.new(make: 'Ford mondeo', rental_rate: 2500, description: "Cool car", user: user )
-cars2 = Car.new(make: 'Opel astra', rental_rate: 2000, description: "Really cool car", user: user)
+cars1 = Car.new(make: 'Ford mondeo', rental_rate: 2500, description: "Cool car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
+cars2 = Car.new(make: 'Opel astra', rental_rate: 2000, description: "Really cool car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
 
 
 cars1.save!
