@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_22_125613) do
+ActiveRecord::Schema.define(version: 2018_05_22_151910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2018_05_22_125613) do
     t.string "address"
     t.date "start_date"
     t.date "end_date"
-    t.boolean "booking_confirmation"
+    t.boolean "booking_confirmation", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,11 +29,12 @@ ActiveRecord::Schema.define(version: 2018_05_22_125613) do
     t.integer "rental_rate"
     t.text "description"
     t.bigint "user_id"
-    t.boolean "available"
+    t.boolean "available", default: true
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "make"
+    t.string "registration_number"
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
