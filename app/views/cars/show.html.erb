@@ -1,0 +1,10 @@
+<h1> Show Cars </h1>
+
+<div><%= @car.make %> </div>
+<div> <%= @car.rental_rate %> </div>
+<div> <%= @car.description %> </div>
+
+
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>
