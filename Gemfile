@@ -15,10 +15,11 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'sass-rails'
-gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
+gem 'simple_form'
+gem 'bootstrap'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
