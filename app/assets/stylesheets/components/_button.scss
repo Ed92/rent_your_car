@@ -19,6 +19,7 @@
   border-bottom: 1px solid rgba( 28, 227, 125, 0.5 );
   background: rgba( 22, 230, 137, 1 );
   color: #fff;
+  margin-bottom: 25px;
   box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.1 );
 
   -webkit-transform: translateZ(0);
@@ -54,7 +55,7 @@
   padding: 6px 10px;
   border-radius: 4px;
   font-weight: lighter;
-  background: #D3D3D3;
+  background: rgba( 22, 230, 137, 1 );
 }
 
 /* Build your own button classes ! */
