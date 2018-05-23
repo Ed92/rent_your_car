@@ -1,7 +1,13 @@
-.cards {
+.flex-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.card {
+  width: 200px;
+
 }
