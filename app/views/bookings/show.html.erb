@@ -1,6 +1,25 @@
-<h1> Bookings </h1>
+<h1 class="header1"> Your bookings </h1>
 
-<%= @booking.car.make %>
-<%= @booking.car.description %>
-<%= @booking.start_date %>
-<%= @booking.end_date %>
+<div class="message">
+  <%= image_tag "car_copy.jpg", id: "car" %>
+ <!--  <img src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan" -->>
+  <div class="message-name">
+    <h3><%=@booking.car.make %></h3>
+
+    <p> <%= @booking.start_date %> to <%= @booking.end_date %></p>
+  </div>
+  <div class="message-body">
+    <p><strong>"Your car details"</strong></p>
+    <p> <%= @booking.car.description %> </p>
+  </div>
+  <div class="message-status">
+    <p class="status pending">Pending</p>
+    <p class="price"> £ <%= @booking.price %></p>
+  </div>
+</div>
+
+<div class="links-to-pages">
+  <%= link_to "home", root_path, class: "btn-nav" %>
+  <%= link_to "view more cars", cars_path, class: "btn-nav" %>
+</div>
+
