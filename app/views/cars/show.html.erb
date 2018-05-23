@@ -1,14 +1,18 @@
-<h1> Show Cars </h1>
+<div class="wrapper">
+  <div class="form">
 
-<div><%= @car.make %> </div>
-<div> <%= @car.rental_rate %> </div>
-<div> <%= @car.description %> </div>
-<%= render 'booking_form'%>
+    <h1> Book Car </h1>
 
-
-
-<%= link_to 'Edit', edit_car_path(@car) %> |
-<%= link_to 'Back', cars_path %> |
-<%= link_to 'Destroy', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <div><%= @car.make %> </div>
+    <div> <%= @car.rental_rate %> </div>
+    <div> <%= @car.description %> </div>
+    <%= render 'booking_form'%>
 
 
+
+    <%= link_to 'Edit', edit_car_path(@car) %> |
+    <%= link_to 'Back', cars_path %> |
+    <%= link_to 'Destroy', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+  </div>
+</div>
