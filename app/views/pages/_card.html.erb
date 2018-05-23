@@ -1,20 +1,12 @@
-<div class="card">
-  <div class="card-body">
-    <div class="card-picture" style="background-image: url('https://picsum.photos/200/300/?random')">
-      <div class="card-hover">
-        <h4><%= car.make %></h4>
-        <p>This is my work I'm proud of it. Check this out</p>
-      </div>
-    </div>
-    <div class="card-likes">
-      <ul class="list-inline">
-        <li><i class="fa fa-heart"></i> 140</li>
-        <li><i class="fa fa-eye"></i> 567</li>
-      </ul>
-    </div>
+
+
+
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1516370710288-61c18f5ed3a6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=57bcb643e2dad6c0b2199671f55b0052&auto=format&fit=crop&w=1350&q=80');">
+  <div class="card-category">£<%= car.rental_rate %></div>
+  <div class="card-description">
+    <h2><%= car.make %></h2>
+    <p><%= car.description %></p>
   </div>
-  <div class="card-footer">
-    <img src="http://placehold.it/30x30" alt="" class="avatar">
-    <a href="#">Bob</a>
-  </div>
+  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+  <%= link_to '', car_path(car), class: "card-link" %>
 </div>
