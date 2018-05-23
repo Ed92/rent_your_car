@@ -35,8 +35,9 @@ class CarsController < ApplicationController
   end
 
   def destroy
-    @car.destroy
-    raise
+    if @car.destroy
+      redirect_to cars_path
+    end
   end
 
   private
@@ -46,6 +47,6 @@ class CarsController < ApplicationController
   end
 
   def car_params
-    params.require(:car).permit("make", "rental_rate", "description", "photo", "available")
+    params.require(:car).permit("make", "rental_rate", "description", "photo", "available", "user_id")
   end
 end
