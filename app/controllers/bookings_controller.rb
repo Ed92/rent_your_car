@@ -11,8 +11,12 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.price = @car.rental_rate * (params[:booking]["end_date(3i)"].to_i  - params[:booking]["start_date(3i)"].to_i)
     if @booking.save
-      redirect_to cars_path
+      redirect_to car_booking_path(@car, @booking)
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
   end
 
   private
