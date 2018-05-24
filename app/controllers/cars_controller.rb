@@ -7,7 +7,7 @@ class CarsController < ApplicationController
     authorize @cars
 
     if params[:address].present?
-      @cars = Car.near(params[:address], 10)
+      @cars = Car.near(params[:address], 100)
     else
       @cars = policy_scope(Car)
     end
