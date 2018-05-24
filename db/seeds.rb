@@ -22,3 +22,4 @@ cars1.save!
 cars2.save!
 cars3.save!
 cars4.save!
+user.save!
