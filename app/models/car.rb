@@ -13,6 +13,9 @@ class Car < ApplicationRecord
   validates :photo, presence: true
   validates :description, presence: true
 
+
+   mount_uploader :photo, PhotoUploader
+
   algoliasearch do
     attribute :make, :rental_rate, :description
 
@@ -21,5 +24,6 @@ class Car < ApplicationRecord
     customRanking ['desc(rental_rate)']
 
   end
+
 
 end
