@@ -22,6 +22,7 @@ class CarsController < ApplicationController
   end
 
   def edit
+
   end
 
   def create
@@ -29,7 +30,7 @@ class CarsController < ApplicationController
     @car.user = current_user
     @car.address = current_user.location
     authorize @car
-   
+
     if @car.save
       redirect_to cars_path
     else
