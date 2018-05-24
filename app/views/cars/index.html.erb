@@ -7,8 +7,17 @@
   <div class="row">
     <% @cars.each do |car| %>
       <div class="col-xs-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-          <div class="card-category">£<%= car.rental_rate %></div>
+        <% if car.photo? %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path car.photo %>);">
+          </div>
+        <% else %>
+
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/djwbd5qpi/image/upload/v1527160841/jfdqpr20so53d3m196qr.jpg');">
+        <% end %>
+
+          <div class="card-category">£<%= car.rental_rate %>
+
+          </div>
           <div class="card-description">
             <h2><%= car.make %></h2>
             <p><%= car.description %></p>
