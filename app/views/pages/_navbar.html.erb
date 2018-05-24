@@ -7,6 +7,12 @@
 
     <!-- Right Navigation -->
     <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <%= t(".sign_out", default: "Logout") %>
+      <% end %>
+      <%= link_to new_user_session_path do  %>
+      <%= t(".sign_in", default: "Login") %>
+      <% end %>
 
   <!--     <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
       <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
