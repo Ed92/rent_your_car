@@ -7,17 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+user = User.create(email: "john@smith.com", password: "123456")
 
 user = User.last
 
-cars1 = Car.new(make: 'Ford mondeo', rental_rate: 2500, description: "Cool car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
-cars2 = Car.new(make: 'Opel astra', rental_rate: 2000, description: "Really cool car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
+cars1 = Car.new(make: 'Ford mondeo', rental_rate: 250, description: "Cool car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
+cars2 = Car.new(make: 'Opel astra', rental_rate: 200, description: "Really cool car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
 
-cars3 = Car.new(make: 'Ferrari', rental_rate: 2500, description: "Super car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
-cars4 = Car.new(make: 'Porsche', rental_rate: 2000, description: "Fast car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
+cars3 = Car.new(make: 'Ferrari', rental_rate: 450, description: "Super car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
+cars4 = Car.new(make: 'Porsche', rental_rate: 400, description: "Fast car", user: user, registration_number: 'HV13HNM', photo: 'https://www.autotrader.co.uk/images/at3/sell/landing-pages/hero-car.png')
 
 
 cars1.save!
 cars2.save!
 cars3.save!
 cars4.save!
+user.save!

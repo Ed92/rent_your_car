@@ -7,6 +7,12 @@ class CarsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @markers =
+      {
+        lat: @car.latitude,
+        lng: @car.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/cars/map_box", locals: { car: car }) }
+      }
   end
 
   def new
@@ -47,6 +53,7 @@ class CarsController < ApplicationController
   end
 
   def car_params
-    params.require(:car).permit(:make, :rental_rate, :description, :photo, :available, :user_id)
+    params.require(:car).permit(:make, :rental_rate, :description, :photo, :available, :user_id, :address)
+
   end
 end

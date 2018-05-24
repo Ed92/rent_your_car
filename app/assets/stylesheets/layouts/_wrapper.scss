@@ -1,12 +1,21 @@
 .wrapper {
   background-color: lightgrey;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 .container {
   margin: 0 auto;
   width: 970px;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.form {
+  padding-left: 120px;
+  padding-right: 120px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
