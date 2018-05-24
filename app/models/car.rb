@@ -14,7 +14,7 @@ class Car < ApplicationRecord
   validates :description, presence: true
 
 
-   mount_uploader :photo, PhotoUploader
+      mount_uploader :photo, PhotoUploader
 
   algoliasearch do
     attribute :make, :rental_rate, :description

@@ -1,5 +1,10 @@
+.index-container {
+  margin-top: 100px;
+}
+
 .card {
-  height: 175px;
+  height: 275px;
+  width: 400px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
@@ -7,11 +12,11 @@
   position: relative;
   margin-right: 20px;
   margin-left: 20px;
-  margin-top: 10px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  margin-top: 40px;
+  // padding-left: 35px;
+  // padding-right: 35px;
+  // padding-top: 25px;
+  // padding-bottom: 25px;
 
 }
 .card-user {

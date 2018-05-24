@@ -1,9 +1,18 @@
 class CarsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
   def index
     @cars = policy_scope(Car)
     authorize @cars
+
+    if params[:address].present?
+      @cars = Car.near(params[:address], 100)
+    else
+      @cars = policy_scope(Car)
+    end
+
+
   end
 
   def show
@@ -22,6 +31,7 @@ class CarsController < ApplicationController
   end
 
   def edit
+
   end
 
   def create
@@ -29,7 +39,7 @@ class CarsController < ApplicationController
     @car.user = current_user
     @car.address = current_user.location
     authorize @car
-   
+
     if @car.save
       redirect_to cars_path
     else
