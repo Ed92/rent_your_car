@@ -1,0 +1,41 @@
+.profile-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.profile-card {
+  margin-bottom: 10px;
+  border-radius:5px;
+  overflow: hidden;
+  background: white;
+  flex: 0 0 30%;
+  .car-image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .price {
+      position: absolute;
+      bottom: -15px;
+      width: 100%;
+      text-align: center;
+      span {
+        padding: 10px;
+        background: white;
+        border-radius: 50px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        color: $green;
+      }
+    }
+  }
+  .car-info {
+    text-align: center;
+    padding: 0 20px;
+    h2 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
+

@@ -2,12 +2,60 @@
 
 <h1 class="header1"> Your Profile page </h1>
 
+<div class="profile-cards">
+  <% current_user.bookings.each do |booking| %>
+  <% if booking.car.photo? %>
+  <% photo = cl_image_path booking.car.photo %>
+  <% else %>
+  <% photo = image_path "car_copy.jpg" %>
+  <% end %>
+    <div class="profile-card">
+      <div class="car-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= photo %>);">
+        <div class="price">
+          <span>£<%= booking.car.rental_rate %></span>
+
+        </div>
+      </div>
+      <div class="car-info">
+        <h2>Contratulations!</h2>
+        <p>You've booked <%= booking.car.make %></p>
+        <p><%= booking.start_date %> - <%= booking.end_date %></p>
+        <%= link_to "Pick up your car here", "#" %>
+      </div>
+    </div>
+
+
+  <% end %>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+<!-- --- ---- ----- ---- --- -->
+
+
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/djwbd5qpi/image/upload/v1527160841/jfdqpr20so53d3m196qr.jpg');">
+  <div class="car-name">Car Name</div>
+  <div class="card-description">
+    <h2>Car Model</h2>
+    <p>Car Description</p>
+  </div>
+  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+  <a class="card-link" href="#" ></a>
+</div>
+
 <div class="message">
   <%= image_tag "car_copy.jpg", id: "car" %>
  <!--  <img src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan" -->>
   <div class="message-name">
-    <p><%= @user.email %></p>
-  <% @user.bookings.each do |booking| %>
+    <p><%= current_user.email %></p>
+  <% current_user.bookings.each do |booking| %>
     <h3><%=booking.car.make %></h3>
 
     <p> <%= booking.start_date %> to <%= booking.end_date %></p>
@@ -26,18 +74,4 @@
 <div class="links-to-pages">
   <%= link_to "home", root_path, class: "btn-nav" %>
   <%= link_to "view more cars", cars_path, class: "btn-nav" %>
-</div>
-
-</div>
-
------------
-
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/djwbd5qpi/image/upload/v1527160841/jfdqpr20so53d3m196qr.jpg');">
-  <div class="car-name">Car Name</div>
-  <div class="card-description">
-    <h2>Car Model</h2>
-    <p>Car Description</p>
-  </div>
-  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-  <a class="card-link" href="#" ></a>
 </div>
