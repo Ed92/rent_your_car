@@ -19,9 +19,7 @@ class Car < ApplicationRecord
   algoliasearch do
     attribute :make, :rental_rate, :description
 
-    searchableAttributes ['make']
-
-    customRanking ['desc(rental_rate)']
+    # customRanking ['desc(rental_rate)']
 
   end
 
