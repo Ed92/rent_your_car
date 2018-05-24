@@ -1,29 +1,25 @@
 <div class="wrapper">
+
   <div class="form">
+    <h1> <%= @car.make %> - £<%= @car.rental_rate %> per day </h1>
+    <div class="container">
+      <div class="booking_f item">
+        <h2> Book Car </h2>
+        <%= render 'booking_form'%>
+        </div>
+      <div id="map" class="item" style="width: 100%; height: 600px; "data-markers="<%= @markers.to_json %>"></div>
+    </div>
+  </div>
 
-    <h1> Book Car </h1>
-
-    <div><%= @car.make %> </div>
-    <div> <%= @car.rental_rate %> </div>
-    <div> <%= @car.description %> </div>
-    <%= render 'booking_form'%>
-
-
-
+  <div class="links">
     <%= link_to 'Edit', edit_car_path(@car) %> |
     <%= link_to 'Back', cars_path %> |
     <%= link_to 'Destroy', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
-
   </div>
 </div>
 
 
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-></div>
 
-  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_SERVER_KEY']}" %>
-  <%= javascript_pack_tag "map" %>
+
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_SERVER_KEY']}" %>
+<%= javascript_pack_tag "map" %>
