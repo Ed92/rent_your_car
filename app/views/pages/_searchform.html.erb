@@ -2,19 +2,20 @@
 
 
 <form action="/cars" method="get" >
+  <div class="fhold" style="padding: 20px;">
+    <label class="searchbar" for="address">Whats your address</label>
+    <input name="search" type="text" placeholder="Address or Postcode.."/>
+  </div>
+  <div class="fhold" style="padding: 20px;">
+    <label for="start_date">Start Date</label>
+    <input id="datetime" name="start_date" type="datetime-local" placeholder="Format DDMMYY" />
 
-  <label for="searched_car">Search for your car:</label>
-  <input id="searched_car" name="searched_car" type="text" placeholder="Search here"/>
+    <label for="end_date">End Date</label>
+    <input id="datetime" name="end_date" type="datetime-local" placeholder="Format DDMMYY" />
+  </div>
 
-  <label for="address">Whats your address</label>
-  <input id="address" name="address" type="text" placeholder="Postcode or full address"/>
-
-  <label for="start_date">Start Date</label>
-  <input id="start_date" name="start_date" type="date" placeholder="Format DDMMYY" />
-
-  <label for="end_date">End Date</label>
-  <input id="end_car" name="end_date" type="date" placeholder="Format DDMMYY" />
-
-  <input name="commit" type="submit" value="Search" class="btn btn-primary" />
+  <div class="fhold" style="padding: 20px;">
+    <input name="commit" type="submit" value="Search" class="button" />
+  </div>
 </form>
 
