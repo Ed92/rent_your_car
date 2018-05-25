@@ -1,0 +1,52 @@
+.fhold {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 60px;
+}
+
+.searcher {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.searcher:focus {
+    width: 100%;
+}
+
+.searchbar {
+  padding-right: 100px;
+  margin-left: -35px;
+}
+
+input {
+  color: black;
+}
+.start {
+  margin-right: 35px;
+  margin-left: -30px;
+
+
+}
+.datepicker {
+  color: green;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+input.searcher {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
