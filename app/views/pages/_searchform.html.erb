@@ -1,17 +1,12 @@
 
 
-
 <form action="/cars" method="get" >
-  <div class="fhold" style="padding: 20px;">
-    <label class="searchbar" for="address">Whats your address</label>
-    <input name="search" type="text" placeholder="Address or Postcode.."/>
+  <div class="fhold" style="padding: 20px; min-width: 500px; max-width: 500px; margin-left: 605px;">
+    <input class ="searcher" name="search" type="text" placeholder="Address or Postcode.."/>
   </div>
-  <div class="fhold" style="padding: 20px;">
-    <label for="start_date">Start Date</label>
-    <input id="datetime" name="start_date" type="datetime-local" placeholder="Format DDMMYY" />
-
-    <label for="end_date">End Date</label>
-    <input id="datetime" name="end_date" type="datetime-local" placeholder="Format DDMMYY" />
+  <div class="fhold" style="padding: 20px; max-width: 330px; justify-content: space-between; margin-left: 650px; text-align: center;">
+    <input  class="start datepicker" name="start_date" type="datetime-local" placeholder="Start date" />
+    <input class="datepicker" name="end_date" type="datetime-local" placeholder="End date" />
   </div>
 
   <div class="fhold" style="padding: 20px;">
