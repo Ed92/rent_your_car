@@ -10,18 +10,20 @@
   <% photo = image_path "car_copy.jpg" %>
   <% end %>
     <div class="profile-card">
-      <div class="car-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= photo %>);">
-        <div class="price">
-          <span>£<%= booking.car.rental_rate %></span>
+      <%= link_to car_booking_path(booking.car, booking) do %>
+        <div class="car-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= photo %>);">
+          <div class="price">
+            <span>£<%= booking.car.rental_rate %></span>
 
+          </div>
         </div>
-      </div>
-      <div class="car-info">
-        <h2>Contratulations!</h2>
-        <p>You've booked <%= booking.car.make %></p>
-        <p><%= booking.start_date %> - <%= booking.end_date %></p>
-        <%= link_to "Pick up your car here", "#" %>
-      </div>
+        <div class="car-info">
+          <h2>Contratulations!</h2>
+          <p>You've booked <%= booking.car.make %></p>
+          <p><%= booking.start_date %> - <%= booking.end_date %></p>
+          <%= link_to "Pick up your car here", "#" %>
+        </div>
+      <% end %>
     </div>
 
 
