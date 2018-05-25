@@ -6,8 +6,7 @@
 }
 
 .searcher {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
+    width: 240px;
     transition: width 0.4s ease-in-out;
 }
 
@@ -23,15 +22,9 @@
 input {
   color: black;
 }
-.start {
-  margin-right: 35px;
-  margin-left: -30px;
 
-
-}
 .datepicker {
   color: green;
-  border-radius: 6px;
   border: none;
   background: transparent;
   border-bottom: 1px solid white;
