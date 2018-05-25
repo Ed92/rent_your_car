@@ -1,18 +1,34 @@
-<div class="wrapper">
+<div class="main-section">
 
- <div class="show-container">
-    <h1> Book a <%= @car.make %> - £<%= @car.rental_rate %> for just per day </h1>
+ <div class="container">
+    <div class="car-header">
+      <h3><%= @car.make %> - £<%= @car.rental_rate %> for just per day </h3>
+    </div>
 
   <div class="centrepiece-container">
 
     <div class="form">
-      <div><%= image_tag "#{@car.photo}", id: "car", :class => "center", :style => "width: 100%" %>
+      <div>
+        <%= image_tag "#{@car.photo}", id: "car", :class => "center", :style => "width: 100%" %>
       </div>
-      <%= render 'cars/show_renter' %>
+      <div class='car-details-container'>
+        <p id="car-details">
+          <%= @car.description  %>
+        </p>
+        <% if current_user.id == @car.user_id  %>
+          <%= render 'cars/show_owner' %>
+        <% else %>
+          <%= render 'cars/booking_form' %>
+        <% end %>
+      </div>
     </div>
-    <div id="map" class="item" style="width: 100%; height: 600px; "data-markers="<%= @markers.to_json %>">
+
+    <div id="map" class="item" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>">
     </div>
+
   </div>
+
+
  </div>
 </div>
 

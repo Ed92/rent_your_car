@@ -16,7 +16,10 @@ class CarsController < ApplicationController
   end
 
   def show
+    @car = Car.find(params[:id])
+    @user = User.find(@car.user_id)
     @booking = Booking.new
+
     @markers =
       {
         lat: @car.latitude,
@@ -35,6 +38,7 @@ class CarsController < ApplicationController
   end
 
   def create
+    raise
     @car = Car.new(car_params)
     @car.user = current_user
     @car.address = current_user.location
