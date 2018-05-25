@@ -21,6 +21,8 @@ class BookingsController < ApplicationController
     @car = Car.find(params[:car_id])
     @booking = Booking.find(params[:id])
     authorize @booking
+    @car = Car.new
+    raise
   end
 
   private
