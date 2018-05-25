@@ -1,4 +1,8 @@
 /* Main navbar */
+a:hover {
+  text-decoration: none;
+}
+
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
@@ -28,6 +32,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  a {
+    padding: 6px;
+    border: 1px solid #469AE0;
+    border-radius: 4px;
+    margin-left: 10px;
+  }
 }
 
 /* Basic navbar item */

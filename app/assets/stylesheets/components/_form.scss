@@ -21,7 +21,14 @@
 }
 
 #car_photo {
+  display: flex;
+    width: 222px;
+}
 
+.car_photo {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login {
