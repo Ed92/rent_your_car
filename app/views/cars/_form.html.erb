@@ -8,12 +8,12 @@
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
       <div class="form-inputs">
-        <%= f.input :make %>
-        <%= f.input :rental_rate %>
-        <%= f.input :description %>
-        <%= f.input :photo %>
+        <%= f.input :make, required: false, label: "Make of Vehicle", prompt: "Make" %>
+        <%= f.input :rental_rate, required: false %>
+        <%= f.input :description, required: false %>
+        <%= f.input :photo, required: false %>
         <%= f.input :photo_cache, as: :hidden %>
-        <%= f.input :available %>
+        <%= f.input :available, required: false %>
       </div>
 
       <div class="form-actions">
