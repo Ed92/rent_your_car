@@ -1,31 +1,18 @@
 <div class="wrapper">
 
  <div class="show-container">
-    <h1> <%= @car.make %> - £<%= @car.rental_rate %> per day </h1>
+    <h1> Book a <%= @car.make %> - £<%= @car.rental_rate %> for just per day </h1>
 
   <div class="centrepiece-container">
 
     <div class="form">
-      <div><%= image_tag "#{@car.photo}", id: "car", :class => "center", :style => "width: 50%" %>
+      <div><%= image_tag "#{@car.photo}", id: "car", :class => "center", :style => "width: 100%" %>
       </div>
-
-      <div class="my-container">
-        <div class="booking_f item">
-          <h2> Book Car </h2>
-          <%= render 'booking_form'%>
-        </div>
-
-      </div>
+      <%= render 'cars/show_renter' %>
     </div>
     <div id="map" class="item" style="width: 100%; height: 600px; "data-markers="<%= @markers.to_json %>">
     </div>
   </div>
-
-    <div class="links">
-      <%= link_to 'Edit', edit_car_path(@car) %> |
-      <%= link_to 'Back', cars_path %> |
-      <%= link_to 'Destroy', @car, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
  </div>
 </div>
 
